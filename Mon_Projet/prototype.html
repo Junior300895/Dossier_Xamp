@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Prototype</title>
+        <script>
+             var eleve = function(nom){
+                this.nom = nom
+            }
+
+            eleve.prototype.moyenne = function(){
+                var somme = 0
+                    for(var i=0; i< this.notes.length; i++){
+                        somme+= this.notes[i]
+                    }
+                    return somme / this.notes.length
+            }
+            var jean = new eleve("Jean")
+            var marc = new eleve("Marc")
+
+
+            /*var eleve = {
+                moyenne: function(){
+                    var somme = 0
+                    for(var i=0; i< this.notes.length; i++){
+                        somme+= this.notes[i]
+                    }
+                    return somme / this.notes.length
+                },
+                present: function(){
+                    console.log(this.nom + "présent")
+                }
+            }
+            var jean = {
+                nom: 'Jean',
+                notes:  [10,20]
+            }
+            var marc = {
+                nom: "Marc",
+                notes:  [20,20]
+            }
+            jean.__proto__ = eleve
+            marc.__proto__ = eleve
+            */
+
+        </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
